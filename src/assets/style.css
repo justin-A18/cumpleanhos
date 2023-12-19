@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.div-blob {
+	display: block;
+	background-image: url('https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/302501633_1771479729880002_3179458846921073746_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeGro5PhSZj1oPwHDSoOBS2RTZzsnBFlYlNNnOycEWViUx6Qs78soUJiUOAkfe_oaMU97uCWVSy0ZvKoxCK7uNXF&_nc_ohc=dSsmwVG5ARQAX_BQfEk&_nc_ht=scontent.flim38-1.fna&oh=00_AfCbWEtHfB7hAUBkTLFcd3iasZO9fEZQJ0DeVZ73nTRX1w&oe=6587B85E');
+	background-size: cover;
+	box-shadow: 0 20px 5px 5px rgba(0, 0, 0,0.2);
+	animation: blob 5s ease-in-out infinite;
+	transition: border-radius 1s ease-in-out;
+	border-radius: 0;
+}
+
+.delay{
+	--animate-delay: 0.5s;
+}
+
+.bg-transparent{
+	background-color: rgba(0, 0, 0,0.5);
+}
+
+@keyframes blob {
+	0%{
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+	50%{
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+	100%{
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}
